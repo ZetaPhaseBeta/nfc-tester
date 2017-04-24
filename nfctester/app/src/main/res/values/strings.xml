@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">nfctester</string>
-    <string name="explanation">explanation</string>
+    <string name="explanation">nfc is on</string>
 </resources>
