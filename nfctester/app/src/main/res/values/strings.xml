@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">nfctester</string>
+    <string name="explanation">explanation</string>
 </resources>
