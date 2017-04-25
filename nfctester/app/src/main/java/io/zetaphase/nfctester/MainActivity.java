@@ -69,6 +69,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onNewIntent(Intent intent) {
+        Log.d("NEWINTENT", "U JUST TAPPED NFC");
         handleIntent(intent);
     }
 
@@ -163,7 +164,7 @@ public class MainActivity extends Activity {
 
             // Get the Language Code
             int languageCodeLength = payload[0] & 0063;
-            
+
             return new String(payload, languageCodeLength + 1, payload.length - languageCodeLength - 1, textEncoding);
         }
 
