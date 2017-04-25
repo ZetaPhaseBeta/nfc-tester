@@ -27,7 +27,7 @@
         android:layout_height="200dp"
         app:srcCompat="@drawable/nfclogo"
         android:src="@drawable/nfclogo"
-        android:gravity="center"
+        android:gravity="center|center_vertical"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="94dp" />
