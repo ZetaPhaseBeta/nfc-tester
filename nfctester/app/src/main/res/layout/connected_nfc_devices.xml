@@ -7,6 +7,7 @@
         android:id="@+id/connected_list_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Connected NFC Devices"
         android:textSize="25sp" />
 
