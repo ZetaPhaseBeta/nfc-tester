@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onNewIntent(Intent intent) {
         Log.d("NEWINTENT", "U JUST TAPPED NFC");
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.device_connected);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.beep);
         mp.start();
         handleIntent(intent);
     }
