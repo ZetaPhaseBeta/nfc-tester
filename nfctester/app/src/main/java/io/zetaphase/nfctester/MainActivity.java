@@ -2,9 +2,11 @@ package io.zetaphase.nfctester;
 
 import android.app.Activity;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentFilter.MalformedMimeTypeException;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
@@ -13,6 +15,7 @@ import android.nfc.Tag;
 import android.nfc.tech.Ndef;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +55,8 @@ public class MainActivity extends Activity {
             mTextView.setText(R.string.explanation);
         }
 
+
+
         handleIntent(getIntent());
     }
 
@@ -71,12 +76,17 @@ public class MainActivity extends Activity {
     @Override
     protected void onNewIntent(Intent intent) {
         Log.d("NEWINTENT", "U JUST TAPPED NFC");
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.beep);
-        mp.start();
         handleIntent(intent);
     }
 
     private void handleIntent(Intent intent) {
+
+        AudioManager audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        if(audio.getRingerMode()==AudioManager.RINGER_MODE_SILENT || audio.getRingerMode()==AudioManager.RINGER_MODE_VIBRATE){
+            final MediaPlayer mp = MediaPlayer.create(this, R.raw.beep);
+            mp.start();
+        }
+
         String action = intent.getAction();
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
 
