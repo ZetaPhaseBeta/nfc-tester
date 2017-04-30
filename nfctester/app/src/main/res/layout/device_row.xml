@@ -14,4 +14,15 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="20dp"
         android:text="Device Name" />
+
+    <TextView
+        android:id="@+id/device_row_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/device_row_name"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:text="Duration Connected" />
 </RelativeLayout>
