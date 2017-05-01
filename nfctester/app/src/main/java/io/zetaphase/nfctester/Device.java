@@ -6,4 +6,3 @@ package io.zetaphase.nfctester;
 
 public class Device {
 }
-m ""
