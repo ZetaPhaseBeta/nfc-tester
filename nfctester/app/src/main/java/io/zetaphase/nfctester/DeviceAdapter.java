@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,7 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(MainActivity.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.device_row, null);
 
+        TextView name = (TextView) view.findViewById(R.id.device_row_name);
         /*
         TextView title = (TextView) view.findViewById(R.id.dishRowName);
         TextView description = (TextView) view.findViewById(R.id.dishRowDescription);
