@@ -42,6 +42,8 @@ public class DevicesList extends Activity {
 
 
         nfcContent = (TextView) findViewById(R.id.nfc_content);
+        deviceListView = (ListView) findViewById(R.id.deviceList);
+        
 
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
