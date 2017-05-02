@@ -33,6 +33,8 @@ public class DevicesList extends Activity {
     private TextView nfcContent;
     private NfcAdapter mNfcAdapter;
     private ListView deviceListView;
+    
+    public static DeviceAdapter deviceAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class DevicesList extends Activity {
 
         nfcContent = (TextView) findViewById(R.id.nfc_content);
         deviceListView = (ListView) findViewById(R.id.deviceList);
-        
+        deviceListView.setAdapter();
 
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
