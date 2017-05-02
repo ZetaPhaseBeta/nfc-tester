@@ -22,7 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class DevicesList extends Activity {
@@ -33,8 +35,9 @@ public class DevicesList extends Activity {
     private TextView nfcContent;
     private NfcAdapter mNfcAdapter;
     private ListView deviceListView;
-    
+
     public static DeviceAdapter deviceAdapter;
+    public static List<Device> deviceList = new ArrayList<Device>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
