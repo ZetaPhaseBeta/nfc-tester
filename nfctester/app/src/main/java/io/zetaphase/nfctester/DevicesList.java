@@ -17,6 +17,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class DevicesList extends Activity {
 
     private TextView mTextView;
     private NfcAdapter mNfcAdapter;
+    private ListView deviceListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
