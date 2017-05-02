@@ -30,7 +30,7 @@ public class DevicesList extends Activity {
     public static final String MIME_TEXT_PLAIN = "text/plain";
     public static final String TAG = "NfcDemo";
 
-    private TextView mTextView;
+    private TextView nfcContent;
     private NfcAdapter mNfcAdapter;
     private ListView deviceListView;
 
@@ -39,7 +39,10 @@ public class DevicesList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.connected_nfc_devices);
 
-        mTextView = (TextView) findViewById(R.id.Textview1);
+
+
+        nfcContent = (TextView) findViewById(R.id.nfc_content);
+
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
@@ -52,9 +55,9 @@ public class DevicesList extends Activity {
         }
 
         if (!mNfcAdapter.isEnabled()) {
-            mTextView.setText("NFC is disabled.");
+            nfcContent.setText("NFC is disabled.");
         } else {
-            mTextView.setText(R.string.explanation);
+            nfcContent.setText(R.string.explanation);
         }
 
 
@@ -186,7 +189,7 @@ public class DevicesList extends Activity {
         @Override
         protected void onPostExecute(String result) {
             if (result != null) {
-                mTextView.setText("Read content: " + result);
+                nfcContent.setText("Read content: " + result);
             }
         }
     }
