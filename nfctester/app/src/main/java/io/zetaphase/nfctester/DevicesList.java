@@ -37,14 +37,14 @@ public class DevicesList extends Activity {
     private ListView deviceListView;
 
     public static DeviceAdapter deviceAdapter;
-    public static List<Device> deviceList = new ArrayList<Device>();
+    public static ArrayList<Device> deviceList = new ArrayList<Device>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.connected_nfc_devices);
 
-
+        deviceAdapter = new DeviceAdapter(this, 0, deviceList);
 
         nfcContent = (TextView) findViewById(R.id.nfc_content);
         deviceListView = (ListView) findViewById(R.id.deviceList);
