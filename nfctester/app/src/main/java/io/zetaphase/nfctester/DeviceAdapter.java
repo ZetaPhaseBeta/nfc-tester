@@ -18,10 +18,10 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
     private Context context;
     private List<Device> deviceList;
 
-    public DeviceAdapter(Context context, int resource, ArrayList<Device> dishes){
-        super(context, resource, dishes);
+    public DeviceAdapter(Context context, int resource, ArrayList<Device> devices){
+        super(context, resource, devices);
         this.context = context;
-        this.deviceList = dishes;
+        this.deviceList = devices;
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
@@ -45,5 +45,13 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
         */
 
         return view;
+    }
+
+    public List<Device> getDeviceList(){
+        return deviceList;
+    }
+
+    public void setDeviceList(ArrayList<Device> deviceList){
+
     }
 }

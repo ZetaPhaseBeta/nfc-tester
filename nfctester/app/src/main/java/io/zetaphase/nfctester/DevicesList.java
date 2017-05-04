@@ -38,7 +38,6 @@ public class DevicesList extends Activity {
 
     public static DeviceAdapter deviceAdapter;
     public static ArrayList<Device> deviceList = new ArrayList<Device>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
