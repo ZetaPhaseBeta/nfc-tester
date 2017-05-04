@@ -52,6 +52,6 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
     }
 
     public void setDeviceList(ArrayList<Device> deviceList){
-
+        this.deviceList = deviceList;
     }
 }
