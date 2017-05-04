@@ -92,6 +92,13 @@ public class DevicesList extends Activity {
 
     private void handleIntent(Intent intent) {
 
+        //add to the list
+        Device d = new Device("hi");
+        deviceList.add(d);
+        deviceAdapter.setDeviceList(deviceList);
+        deviceAdapter.notifyDataSetChanged();
+
+        //play a sound
         AudioManager audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         if(audio.getRingerMode()==AudioManager.RINGER_MODE_SILENT || audio.getRingerMode()==AudioManager.RINGER_MODE_VIBRATE){
             final MediaPlayer mp = MediaPlayer.create(this, R.raw.beep);
