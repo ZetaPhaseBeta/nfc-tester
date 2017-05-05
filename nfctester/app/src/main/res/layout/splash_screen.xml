@@ -30,9 +30,22 @@
         android:id="@+id/imageView5"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         app:srcCompat="@drawable/zplogo"
-        android:src="@drawable/zplogo"/>
+        android:src="@drawable/zplogo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_marginTop="11dp"
+        android:layout_toLeftOf="@+id/imageView5"
+        android:layout_toStartOf="@+id/imageView5"
+        android:text="2017"
+        android:textSize="18sp" />
+
 </RelativeLayout>
