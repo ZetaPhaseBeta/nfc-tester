@@ -12,7 +12,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
-        app:srcCompat="@drawable/lflogo_burned" />
+        app:srcCompat="@drawable/lflogo_burned"
+        android:src="@drawable/lflogo_burned"/>
 
     <TextView
         android:id="@+id/textView"
