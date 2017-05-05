@@ -24,4 +24,13 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Designed by Xeliot"
         android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/zplogo" />
 </RelativeLayout>
