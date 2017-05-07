@@ -12,4 +12,14 @@
         android:layout_marginTop="48dp"
         android:text="Device Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/pop_device_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:text="Duration Connected"
+        android:textSize="20sp"
+        android:layout_below="@+id/pop_device_name"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
