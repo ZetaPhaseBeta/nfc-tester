@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextView = (TextView) findViewById(R.id.Textview1);
+        mTextView = (TextView) findViewById(R.id.nfc_content);
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
