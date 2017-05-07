@@ -31,7 +31,7 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
         View view = inflater.inflate(R.layout.device_row, null);
 
         TextView name = (TextView) view.findViewById(R.id.device_row_name);
-        
+
         name.setText(device.getName());
         /*
         TextView title = (TextView) view.findViewById(R.id.dishRowName);
