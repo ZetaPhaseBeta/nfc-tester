@@ -25,12 +25,14 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
-        Device dish = deviceList.get(position);
+        Device device = deviceList.get(position);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(MainActivity.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.device_row, null);
 
         TextView name = (TextView) view.findViewById(R.id.device_row_name);
+        
+        name.setText(device.getName());
         /*
         TextView title = (TextView) view.findViewById(R.id.dishRowName);
         TextView description = (TextView) view.findViewById(R.id.dishRowDescription);
