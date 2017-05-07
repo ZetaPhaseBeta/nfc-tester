@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:srcCompat="@drawable/lflogo_burned"
         android:src="@drawable/lflogo_burned"
         android:gravity="center|center_vertical"
