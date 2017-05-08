@@ -33,18 +33,6 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
         TextView name = (TextView) view.findViewById(R.id.device_row_name);
 
         name.setText(device.getName());
-        /*
-        TextView title = (TextView) view.findViewById(R.id.dishRowName);
-        TextView description = (TextView) view.findViewById(R.id.dishRowDescription);
-        ImageView image = (ImageView) view.findViewById(R.id.dishRowImage);
-        RatingBar rating = (RatingBar) view.findViewById(R.id.dishRowRating);
-
-
-        title.setText(dish.getTitle());
-        description.setText(dish.getDescription());
-        image.setImageBitmap(dish.getBitmap());
-        rating.setRating(dish.getRating());
-        */
 
         return view;
     }
