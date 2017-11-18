@@ -92,11 +92,13 @@ public class DevicesList extends Activity {
 
     private void handleIntent(Intent intent) {
 
+        /*
         //add to the list
         Device d = new Device("hi");
         deviceList.add(d);
         deviceAdapter.setDeviceList(deviceList);
         deviceAdapter.notifyDataSetChanged();
+        */
 
         //play a sound
         AudioManager audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -203,6 +205,10 @@ public class DevicesList extends Activity {
         protected void onPostExecute(String result) {
             if (result != null) {
                 nfcContent.setText("Read content: " + result);
+                Device d = new Device(result);
+                deviceList.add(d);
+                deviceAdapter.setDeviceList(deviceList);
+                deviceAdapter.notifyDataSetChanged();
             }
         }
     }
