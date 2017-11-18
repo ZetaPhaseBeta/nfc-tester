@@ -203,12 +203,6 @@ public class DevicesList extends Activity {
         protected void onPostExecute(String result) {
             if (result != null) {
                 nfcContent.setText("Read content: " + result);
-                /*
-                Device d = new Device(result);
-                deviceList.add(d);
-                deviceAdapter.setDeviceList(deviceList);
-                deviceAdapter.notifyDataSetChanged();
-                */
             }
         }
     }
