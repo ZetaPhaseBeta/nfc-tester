@@ -6,9 +6,11 @@ package io.zetaphase.nfctester;
 
 public class Device {
     private String name;
+    private String tag;
 
     public Device(String name){
         this.name = name;
+        this.tag = tag;
     }
 
     public void setName(String name){
@@ -17,6 +19,14 @@ public class Device {
 
     public String getName(){
         return this.name;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getTag() {
+        return this.tag;
     }
 
     public String toString(){
