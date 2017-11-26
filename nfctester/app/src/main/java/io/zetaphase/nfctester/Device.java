@@ -15,6 +15,14 @@ public class Device {
         this.timeConnected = timeConnected;
     }
 
+    public void setTimeConnected(float timeConnected) {
+        this.timeConnected = timeConnected;
+    }
+
+    public float getTimeConnected(){
+        return this.timeConnected;
+    }
+
     public void setName(String name){
         this.name = name;
     }
