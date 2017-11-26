@@ -21,6 +21,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.security.Timestamp;
+import java.util.Date;
+
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -205,7 +208,9 @@ public class DevicesList extends Activity {
         protected void onPostExecute(String result) {
             if (result != null) {
                 nfcContent.setText("Read content: " + result);
-                Device d = new Device(result);
+                long currentTime = System.currentTimeMillis();
+                //add current time to device
+                Device d = new Device(result, "[insertnfctagid]", 10);
                 deviceList.add(d);
                 deviceAdapter.setDeviceList(deviceList);
                 deviceAdapter.notifyDataSetChanged();
