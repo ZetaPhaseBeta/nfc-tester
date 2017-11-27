@@ -210,7 +210,7 @@ public class DevicesList extends Activity {
                 nfcContent.setText("Read content: " + result);
                 long currentTime = System.currentTimeMillis();
                 //add current time to device
-                Device d = new Device(result, "[insertnfctagid]", 10);
+                Device d = new Device(result, "[insertnfctagid]", currentTime);
                 deviceList.add(d);
                 deviceAdapter.setDeviceList(deviceList);
                 deviceAdapter.notifyDataSetChanged();
