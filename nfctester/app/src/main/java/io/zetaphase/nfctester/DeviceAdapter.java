@@ -31,8 +31,10 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
         View view = inflater.inflate(R.layout.device_row, null);
 
         TextView name = (TextView) view.findViewById(R.id.device_row_name);
+        TextView duration = (TextView) view.findViewById(R.id.device_row_duration);
 
         name.setText(device.getName());
+        duration.setText(Float.toString(device.getTimeConnected()));
 
         return view;
     }
