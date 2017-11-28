@@ -34,6 +34,7 @@ public class DeviceAdapter extends ArrayAdapter<Device>{
         TextView duration = (TextView) view.findViewById(R.id.device_row_duration);
 
         name.setText(device.getName());
+        // time connected = current time - device.getTimeConnected() [update this every period of time]
         duration.setText(Float.toString(device.getTimeConnected()));
 
         return view;
