@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.security.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import java.io.UnsupportedEncodingException;
@@ -208,6 +209,7 @@ public class DevicesList extends Activity {
         protected void onPostExecute(String result) {
             if (result != null) {
                 nfcContent.setText("Read content: " + result);
+                // String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); utilize formatted string instead
                 long currentTime = System.currentTimeMillis();
                 //add current time to device
                 Device d = new Device(result, "[insertnfctagid]", currentTime);
