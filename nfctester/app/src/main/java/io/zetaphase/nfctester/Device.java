@@ -9,10 +9,10 @@ public class Device {
     private String tag;
     private float timeConnected;
 
-    public Device(String name, String tag, float timeConnected){
+    public Device(String name, String tag, String timeStamp){
         this.name = name;
         this.tag = tag;
-        this.timeConnected = timeConnected;
+        //this.timeConnected = parse timestamp string to get float time;
     }
 
     public void setTimeConnected(float timeConnected) {

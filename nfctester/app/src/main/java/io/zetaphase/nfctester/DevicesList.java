@@ -209,10 +209,10 @@ public class DevicesList extends Activity {
         protected void onPostExecute(String result) {
             if (result != null) {
                 nfcContent.setText("Read content: " + result);
-                // String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); utilize formatted string instead
+                String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
                 long currentTime = System.currentTimeMillis();
                 //add current time to device
-                Device d = new Device(result, "[insertnfctagid]", currentTime);
+                Device d = new Device(result, "[insertnfctagid]", timeStamp);
                 deviceList.add(d);
                 deviceAdapter.setDeviceList(deviceList);
                 deviceAdapter.notifyDataSetChanged();
