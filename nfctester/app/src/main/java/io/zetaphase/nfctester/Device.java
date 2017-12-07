@@ -7,12 +7,22 @@ package io.zetaphase.nfctester;
 public class Device {
     private String name;
     private String tag;
+    private String type;
     private float timeConnected;
 
-    public Device(String name, String tag, String timeStamp){
+    public Device(String name, String tag, String timeStamp, String type){
         this.name = name;
         this.tag = tag;
+        this.type = type;
         //this.timeConnected = parse timestamp string to get float time;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return this.type;
     }
 
     public void setTimeConnected(float timeConnected) {
