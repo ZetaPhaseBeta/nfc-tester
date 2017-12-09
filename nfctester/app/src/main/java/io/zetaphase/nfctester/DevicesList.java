@@ -210,9 +210,10 @@ public class DevicesList extends Activity {
             if (result != null) {
                 nfcContent.setText("Read content: " + result);
                 String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+                String type = "phone"; //example: generalize using information from NFC Tag
                 long currentTime = System.currentTimeMillis();
                 //add current time to device
-                Device d = new Device(result, "[insertnfctagid]", timeStamp);
+                Device d = new Device(result, "[insertnfctagid]", timeStamp, type);
                 deviceList.add(d);
                 deviceAdapter.setDeviceList(deviceList);
                 deviceAdapter.notifyDataSetChanged();
